@@ -14,6 +14,7 @@
 		91789846288FB03F00B25124 /* CO_LIFTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91789845288FB03F00B25124 /* CO_LIFTTests.swift */; };
 		91789850288FB03F00B25124 /* CO_LIFTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178984F288FB03F00B25124 /* CO_LIFTUITests.swift */; };
 		91789852288FB03F00B25124 /* CO_LIFTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91789851288FB03F00B25124 /* CO_LIFTUITestsLaunchTests.swift */; };
+		9178986328905E2800B25124 /* RobotoSlab-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9178986228905E2800B25124 /* RobotoSlab-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		9178984B288FB03F00B25124 /* CO-LIFTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CO-LIFTUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9178984F288FB03F00B25124 /* CO_LIFTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO_LIFTUITests.swift; sourceTree = "<group>"; };
 		91789851288FB03F00B25124 /* CO_LIFTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO_LIFTUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9178986228905E2800B25124 /* RobotoSlab-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		9178986428905F8C00B25124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 		91789833288FB03D00B25124 /* CO-LIFT */ = {
 			isa = PBXGroup;
 			children = (
+				9178986428905F8C00B25124 /* Info.plist */,
+				9178986228905E2800B25124 /* RobotoSlab-VariableFont_wght.ttf */,
 				91789834288FB03D00B25124 /* CO_LIFTApp.swift */,
 				91789836288FB03D00B25124 /* ContentView.swift */,
 				91789838288FB03F00B25124 /* Assets.xcassets */,
@@ -231,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9178986328905E2800B25124 /* RobotoSlab-VariableFont_wght.ttf in Resources */,
 				9178983C288FB03F00B25124 /* Preview Assets.xcassets in Resources */,
 				91789839288FB03F00B25124 /* Assets.xcassets in Resources */,
 			);
@@ -417,8 +423,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CO-LIFT/Preview Content\"";
+				DEVELOPMENT_TEAM = BF79P7TU4J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CO-LIFT/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -445,8 +453,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CO-LIFT/Preview Content\"";
+				DEVELOPMENT_TEAM = BF79P7TU4J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CO-LIFT/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
