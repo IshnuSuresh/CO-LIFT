@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		915488D3289735A800764E4B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915488D2289735A800764E4B /* LoginView.swift */; };
+		915488D528973BF200764E4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 915488D428973BF200764E4B /* GoogleService-Info.plist */; };
+		9154890F28974DC600764E4B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9154890E28974DC600764E4B /* FirebaseAuth */; };
 		91789835288FB03D00B25124 /* CO_LIFTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91789834288FB03D00B25124 /* CO_LIFTApp.swift */; };
 		91789837288FB03D00B25124 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91789836288FB03D00B25124 /* ContentView.swift */; };
 		91789839288FB03F00B25124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91789838288FB03F00B25124 /* Assets.xcassets */; };
@@ -15,6 +18,14 @@
 		91789850288FB03F00B25124 /* CO_LIFTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9178984F288FB03F00B25124 /* CO_LIFTUITests.swift */; };
 		91789852288FB03F00B25124 /* CO_LIFTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91789851288FB03F00B25124 /* CO_LIFTUITestsLaunchTests.swift */; };
 		9178986328905E2800B25124 /* RobotoSlab-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9178986228905E2800B25124 /* RobotoSlab-VariableFont_wght.ttf */; };
+		9192387A28909B8000DD4A74 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192387928909B8000DD4A74 /* SignUpView.swift */; };
+		9192387E28923A9D00DD4A74 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192387D28923A9C00DD4A74 /* GameView.swift */; };
+		91923880289348C600DD4A74 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192387F289348C600DD4A74 /* ViewRouter.swift */; };
+		919238822893571500DD4A74 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919238812893571500DD4A74 /* MotherView.swift */; };
+		919238842893606200DD4A74 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919238832893606200DD4A74 /* TaskView.swift */; };
+		91923886289392B400DD4A74 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91923885289392B400DD4A74 /* TimerView.swift */; };
+		9192388828939C8800DD4A74 /* ProgressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9192388728939C8800DD4A74 /* ProgressionView.swift */; };
+		91AFE05A2894B51500FFF5DC /* HealthDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AFE0592894B51500FFF5DC /* HealthDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		915488D2289735A800764E4B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		915488D428973BF200764E4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91789831288FB03D00B25124 /* CO-LIFT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CO-LIFT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91789834288FB03D00B25124 /* CO_LIFTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO_LIFTApp.swift; sourceTree = "<group>"; };
 		91789836288FB03D00B25124 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,6 +60,14 @@
 		91789851288FB03F00B25124 /* CO_LIFTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO_LIFTUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9178986228905E2800B25124 /* RobotoSlab-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		9178986428905F8C00B25124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9192387928909B8000DD4A74 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		9192387D28923A9C00DD4A74 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		9192387F289348C600DD4A74 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		919238812893571500DD4A74 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
+		919238832893606200DD4A74 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		91923885289392B400DD4A74 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		9192388728939C8800DD4A74 /* ProgressionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionView.swift; sourceTree = "<group>"; };
+		91AFE0592894B51500FFF5DC /* HealthDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9154890F28974DC600764E4B /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +123,16 @@
 				9178986228905E2800B25124 /* RobotoSlab-VariableFont_wght.ttf */,
 				91789834288FB03D00B25124 /* CO_LIFTApp.swift */,
 				91789836288FB03D00B25124 /* ContentView.swift */,
+				9192387928909B8000DD4A74 /* SignUpView.swift */,
+				915488D2289735A800764E4B /* LoginView.swift */,
+				9192387D28923A9C00DD4A74 /* GameView.swift */,
+				919238812893571500DD4A74 /* MotherView.swift */,
+				9192387F289348C600DD4A74 /* ViewRouter.swift */,
+				91923885289392B400DD4A74 /* TimerView.swift */,
+				919238832893606200DD4A74 /* TaskView.swift */,
+				9192388728939C8800DD4A74 /* ProgressionView.swift */,
+				91AFE0592894B51500FFF5DC /* HealthDataView.swift */,
+				915488D428973BF200764E4B /* GoogleService-Info.plist */,
 				91789838288FB03F00B25124 /* Assets.xcassets */,
 				9178983A288FB03F00B25124 /* Preview Content */,
 			);
@@ -148,6 +180,9 @@
 			dependencies = (
 			);
 			name = "CO-LIFT";
+			packageProductDependencies = (
+				9154890E28974DC600764E4B /* FirebaseAuth */,
+			);
 			productName = "CO-LIFT";
 			productReference = 91789831288FB03D00B25124 /* CO-LIFT.app */;
 			productType = "com.apple.product-type.application";
@@ -220,6 +255,9 @@
 				Base,
 			);
 			mainGroup = 91789828288FB03D00B25124;
+			packageReferences = (
+				9154890D28974DC600764E4B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 91789832288FB03D00B25124 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9178986328905E2800B25124 /* RobotoSlab-VariableFont_wght.ttf in Resources */,
+				915488D528973BF200764E4B /* GoogleService-Info.plist in Resources */,
 				9178983C288FB03F00B25124 /* Preview Assets.xcassets in Resources */,
 				91789839288FB03F00B25124 /* Assets.xcassets in Resources */,
 			);
@@ -263,8 +302,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91923880289348C600DD4A74 /* ViewRouter.swift in Sources */,
+				919238842893606200DD4A74 /* TaskView.swift in Sources */,
+				919238822893571500DD4A74 /* MotherView.swift in Sources */,
 				91789837288FB03D00B25124 /* ContentView.swift in Sources */,
+				9192387A28909B8000DD4A74 /* SignUpView.swift in Sources */,
 				91789835288FB03D00B25124 /* CO_LIFTApp.swift in Sources */,
+				91AFE05A2894B51500FFF5DC /* HealthDataView.swift in Sources */,
+				9192388828939C8800DD4A74 /* ProgressionView.swift in Sources */,
+				915488D3289735A800764E4B /* LoginView.swift in Sources */,
+				91923886289392B400DD4A74 /* TimerView.swift in Sources */,
+				9192387E28923A9D00DD4A74 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +635,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9154890D28974DC600764E4B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9154890E28974DC600764E4B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9154890D28974DC600764E4B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 91789829288FB03D00B25124 /* Project object */;
 }
