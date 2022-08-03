@@ -10,8 +10,7 @@ import SwiftUI
 struct TaskView: View {
     
     @StateObject var viewRouter: ViewRouter
-    @State var circleProgress:CGFloat = 0.00
-    @State var numberOfTasksCompleted: Int = 0
+    @ObservedObject var Information: userInformation
     
     var body: some View {
         GeometryReader{geometry in
@@ -50,12 +49,12 @@ struct TaskView: View {
                                     .frame(width: geometry.size.width/4, height: geometry.size.height/9)
                                 
                                 Circle()
-                                    .trim(from: 0.0, to: circleProgress)
+                                    .trim(from: 0.0, to: Information.circleProgress)
                                     .stroke(.black, lineWidth: 10.0)
                                     .frame(width: geometry.size.width/4, height: geometry.size.height/9)
                                     .rotationEffect(Angle(degrees: -90))
                                 
-                                Text("\(Int(self.circleProgress*100))%")
+                                Text("\(Int(self.Information.circleProgress*100))%")
                                         .font(.custom("RobotoSlab-Regular", size: 20.0))
                             }
                             Spacer()
@@ -72,17 +71,27 @@ struct TaskView: View {
                                 .font(.custom("RobotoSlab-Regular", size: 20.0))
                                 .multilineTextAlignment(.center)
                             
-                            Button {
-                                viewRouter.currentPage = .Timer
-                                numberOfTasksCompleted += 1
-                            } label: {
-                                Text("Start!")
-                                    .font(.custom("RobotoSlab-Regular", size: 20.0))
+                            
+                            if Information.didUserExercise == false{
+                                Button {
+                                    Information.numberOfTasksCompleted += 1
+                                    viewRouter.currentPage = .Timer
+                                    Information.didUserExercise = true
+                                    Information.circleProgress = CGFloat(Information.numberOfTasksCompleted / 4)
+                                } label: {
+                                    Text("Start!")
+                                        .font(.custom("RobotoSlab-Regular", size: 20.0))
+                                        .padding(.vertical, 10)
+                                        .padding(.horizontal, 40)
+                                        .background(Color.white)
+                                        .foregroundColor(Color("Turquoise"))
+                                        .cornerRadius(20)
+                                }
+                            } else {
+                                Text("Completed!")
+                                    .font(.custom("RobotoSlab-Regular", size: 18.0))
+                                    .foregroundColor(.white)
                                     .padding(.vertical, 10)
-                                    .padding(.horizontal, 40)
-                                    .background(Color.white)
-                                    .foregroundColor(Color("Turquoise"))
-                                    .cornerRadius(20)
                             }
 
                         }
@@ -92,20 +101,30 @@ struct TaskView: View {
                         
                         VStack{
                             Text("Meditate For 10 Minutes")
-                                 .font(.custom("RobotoSlab-Regular", size: 20.0))
+                                 .font(.custom("RobotoSlab-Regular", size: 18.0))
                                  .multilineTextAlignment(.center)
                              
-                             Button {
-                                 print("")
-                             } label: {
-                                 Text("Start!")
-                                     .font(.custom("RobotoSlab-Regular", size: 20.0))
-                                     .padding(.vertical, 10)
-                                     .padding(.horizontal, 40)
-                                     .background(Color.white)
-                                     .foregroundColor(Color("Turquoise"))
-                                     .cornerRadius(20)
-                             }
+                            if Information.didUserMeditate == false{
+                                Button {
+                                    viewRouter.currentPage = .Timer
+                                    Information.numberOfTasksCompleted += 1
+                                    Information.didUserMeditate = true
+                                    Information.circleProgress = CGFloat(Information.numberOfTasksCompleted / 4)
+                                } label: {
+                                    Text("Start!")
+                                        .font(.custom("RobotoSlab-Regular", size: 20.0))
+                                        .padding(.vertical, 10)
+                                        .padding(.horizontal, 40)
+                                        .background(Color.white)
+                                        .foregroundColor(Color("Turquoise"))
+                                        .cornerRadius(20)
+                                }
+                            } else{
+                                Text("Completed!")
+                                    .font(.custom("RobotoSlab-Regular", size: 18.0))
+                                    .padding(.vertical, 10)
+                                    .foregroundColor(.white)
+                            }
                         }
                         .frame(width: geometry.size.width/2.2, height: geometry.size.height/5)
                         .background(Rectangle().foregroundColor(Color("Turquoise")))
@@ -179,6 +198,6 @@ struct TaskView: View {
 
 struct TaskView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskView(viewRouter: ViewRouter())
+        TaskView(viewRouter: ViewRouter(), Information: userInformation())
     }
 }

@@ -11,19 +11,62 @@ struct ContentView: View {
     
     @StateObject var viewRouter: ViewRouter
     @StateObject var appViewModel: AppViewModel
+
+    @State private var isActive = false
+    @State private var size = 0.5
+    @State private var opacity = 0.5
     
     var body: some View{
         NavigationView{
             if appViewModel.signedIn{
-                GameView(viewRouter: viewRouter, appViewModel: appViewModel)
+                if isActive{
+                    GameView(viewRouter: viewRouter, appViewModel: appViewModel)
+                        .navigationBarTitle("")
+                        .navigationBarHidden(true)
+                } else{
+                    splash
+                }
             } else {
-                content
+                if isActive{
+                    content
+                        .navigationBarTitle("")
+                        .navigationBarHidden(true)
+                } else {
+                    splash
+                }
             }
         }
+        .navigationViewStyle(.stack)
         .onAppear {
             appViewModel.signedIn = appViewModel.userIsLoggedIn
         }
     }
+    
+    var splash: some View{
+        ZStack {
+            Color("Turquoise").ignoresSafeArea()
+            VStack{
+                VStack{
+                    Image("logo")
+                        .onAppear{
+                            withAnimation(.easeIn(duration: 2.0)) {
+                                self.size = 2.0
+                                self.opacity = 1.0
+                        }
+                    }
+                }
+                .scaleEffect(size)
+                .opacity(opacity)
+            }
+            .onAppear{
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    withAnimation {
+                        self.isActive = true
+                }
+            }
+        }
+    }
+}
     
     var content: some View {
         ZStack{

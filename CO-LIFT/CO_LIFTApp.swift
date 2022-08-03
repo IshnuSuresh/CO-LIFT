@@ -20,11 +20,13 @@ struct CO_LIFTApp: App {
     @StateObject var viewRouter = ViewRouter()
     @StateObject var Information = userInformation()
     @StateObject var appViewModel = AppViewModel()
+    @ObservedObject var timerManager = TimerManager()
+    
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
         WindowGroup {
-            MotherView(viewRouter: viewRouter, Information: Information, appViewModel: appViewModel)
+            MotherView(viewRouter: viewRouter, Information: Information, appViewModel: appViewModel, timerManager: timerManager)
         }
     }
 }

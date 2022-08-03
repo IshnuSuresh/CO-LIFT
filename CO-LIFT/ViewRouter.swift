@@ -20,4 +20,5 @@ enum Page{
     case Timer
     case HealthData
     case Login
+    case Goal
 }

@@ -35,11 +35,9 @@ class AppViewModel: ObservableObject{
 struct SignUpView: View{
     @StateObject var viewRouter: ViewRouter
     @StateObject var appViewModel: AppViewModel
+    @ObservedObject var Information: userInformation
     
-    @State private var Name:String = ""
-    @State private var dateOfBirth:String = ""
-    @State private var Email:String = ""
-    @State private var Password:String = ""
+    @State private var Password = ""
     
     var body: some View{
         ZStack{
@@ -69,7 +67,7 @@ struct SignUpView: View{
                         .font(.custom("RobotoSlab-Regular", size: 20.0))
                         .padding(.trailing, 318.0)
     
-                    TextField("ex. John Doe", text: $Name)
+                    TextField("ex. John Doe", text: $Information.name)
                         .padding(.all, 10.0)
                         .frame(width: 375.0, height: 50.0)
                         .border(Color.black, width: 3.0)
@@ -82,7 +80,7 @@ struct SignUpView: View{
                         .font(.custom("RobotoSlab-Regular", size: 20.0))
                         .padding(.trailing, 255.0)
                     
-                    TextField("ex. July 26, 2022", text: $dateOfBirth)
+                    TextField("ex. July 26, 2022", text: $Information.dateOfBirth)
                         .padding(.all, 10.0)
                         .frame(width: 375.0, height: 50.0)
                         .border(Color.black, width: 3.0)
@@ -95,7 +93,7 @@ struct SignUpView: View{
                         .font(.custom("RobotoSlab-Regular", size: 20.0))
                         .padding(.trailing, 318.0)
                     
-                    TextField("ex. example@gmail.com", text: $Email)
+                    TextField("ex. example@gmail.com", text: $Information.email)
                         .padding(.all, 10.0)
                         .frame(width: 375.0, height: 50.0)
                         .border(Color.black, width: 3.0)
@@ -121,11 +119,11 @@ struct SignUpView: View{
                 
                 Button {
                     
-                    guard !Email.isEmpty, !Password.isEmpty else{
+                    guard !Information.email.isEmpty, !Password.isEmpty else{
                         return 
                     }
                     
-                    appViewModel.signUp(email: Email, password: Password)
+                    appViewModel.signUp(email: Information.email, password: Password)
                     viewRouter.currentPage = .Login
                 } label: {
                     Text("Sign Up!")
@@ -153,6 +151,6 @@ struct SignUpView: View{
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView(viewRouter: ViewRouter(), appViewModel: AppViewModel())
+        SignUpView(viewRouter: ViewRouter(), appViewModel: AppViewModel(), Information: userInformation())
     }
 }
